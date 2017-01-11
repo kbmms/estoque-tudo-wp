@@ -1,0 +1,862 @@
+/*
+Theme Name: Estoque Tudo
+Theme URI: http://www.estoquetudo.com.br
+Author: Abrasivo Digital
+Author URI: http://www.abrasivodigital.com.br
+Description: Site da esmpresa Estoque Tudo
+Version 1.0
+*/
+.slideshowlink {
+	display: none !important;
+}
+@font-face {
+	font-family: "gotham_bold";
+	src: url("fonts/GOTHAM-BOLD.OTF"); /* para IE */
+	src: url("fonts/GOTHAM-BOLD.TTF");
+	}
+@font-face {
+	font-family: "gotham_light";
+	src: url("fonts/GOTHAM-LIGHT.OTF"); /* para IE */
+	src: url("fonts/GOTHAM-LIGHT.TTF");
+	}	
+.topo-fluid {
+	border-bottom: 5px solid #f26e38;
+}
+
+.tel span.pull-right {
+    padding: 30px 0;
+}
+
+.tel span {
+	color: #5cb0be;
+}
+
+.tel a {
+	color: #5cb0be;
+}
+.tel span.glyphicon.glyphicon-search {
+	color: #000;
+}
+
+
+.topo-menu-fluid {
+	background: #28a7b6;
+}
+.current-menu-item, .current_page_item, .current-menu-parent {
+	background: #268490;
+}
+.nav.nav-pills>li>a{
+	color: #fff;
+	background: transparent;
+    padding: 25px 15px;
+    font-family:  "gotham_light", Cursive;
+    font-size: 18px;
+}
+#menu-principal li a {
+	color: #fff;
+	background: transparent;
+    padding: 15px 15px;
+    font-family:  "gotham_light", Cursive;
+    font-size: 18px;
+}
+.navbar-nav>li>.dropdown-menu {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background: #28a7b6;
+}
+.nav.nav-pills>li>a:hover {
+    text-decoration: none;
+    background-color: #268894;
+}
+.logo img {
+	position: absolute;
+    top: 12px;
+    border-bottom: 5px solid #f26e38;
+        z-index: 999999;
+}
+.slide.container-fluid {
+	padding: 0;
+	margin: 0;
+}
+.bx-wrapper img {
+	width: 100%;
+    display: block;
+    height: auto;
+
+}
+.slide ul {
+	margin: 0;
+	padding: 0;
+}
+.bx-wrapper .bx-viewport {
+	left: 0;
+	border:0 !important;
+}
+.bx-wrapper .bx-prev {
+	background: url(bxslider/images/seta-esquerda_03.png);
+	background-repeat: no-repeat;
+
+}
+.bx-wrapper .bx-controls-direction a {
+	height: 41px;
+}
+
+.bx-wrapper .bx-next {
+	background: url(bxslider/images/seta-direita_03.png);
+	background-repeat: no-repeat;
+
+}
+.bx-wrapper .bx-next:hover {
+    background-position: 0 0;
+}
+.texto-slide {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media(max-width: 767px){
+	.texto-slide h1 {
+	font-family: "gotham_bold", Cursive;
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+}
+}
+@media(min-width: 768px){
+.texto-slide h1 {
+	font-family: "gotham_bold", Cursive;
+	font-size: 31px;
+	color: #fff;
+	text-align: center;
+}
+}
+.tel .text-light {
+	font-size: 15.70px;
+	font-family: "gotham_light", Cursive;
+
+}
+.tel .text-bold {
+	font-size: 15.70px;
+	margin: 0 5px;
+		font-family: "gotham_bold", Cursive;
+}
+.tel span {
+	margin:0 6px;
+}
+.texto-slide span {
+	color: #ff8750;
+}
+
+
+
+/*COMO FUNCIONA*/
+.como-funciona-fluid {
+	background: url(images/bg-tira-cinza_02.jpg);
+	background-repeat: repeat-x;
+	margin-bottom: 51px;
+}
+
+.como-funciona-fluid h1 {
+	font-size: 32px;
+}
+.como-funciona-fluid .text-light {
+	font-family: "gotham_light", Cursive;
+	color: #68bac6;
+
+}
+.como-funciona-fluid .text-bold {
+	font-family: "gotham_bold", Cursive;
+	color: #68bac6;
+}
+
+.como-funciona-text span {
+	color: #535e72;
+	font-size: 18px;
+	font-family: "gotham_bold", Cursive;
+}
+.como-funciona-text a{
+	color: #535e72;
+	font-size: 18px;
+	font-family: "gotham_bold", Cursive;
+}
+.col-md-12.como-funciona-text {
+    margin-top: 47px;
+    margin-bottom: 30px;
+    padding: 0;
+}
+.col-md-12.lado-foto, .col-md-6.lado-foto {
+	padding: 0;
+}
+.lado-foto img {
+	width: 100%;
+}
+.contador-blocks {
+	position: absolute;
+    bottom: 0;
+    background: #5c6174;
+    color: #fff;
+    padding: 7px 15px;
+    font-size: 26px;
+    font-family: "gotham_bold", Cursive;
+    z-index: 999;
+}
+.block-opacity-info {
+ 	display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 9999;
+    
+}
+.block-opacity-info p {
+	font-size: 16px;
+    color: #fff;
+    text-align: center;
+    font-family: "gotham_bold", Cursive;	
+    padding: 10px;
+}
+.bg-hover {
+	display: none;
+	background: red;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+    background: rgba(234, 140, 72, 0.93);
+	z-index: 9999;
+
+}
+
+.col-md-12.lado-foto:hover .bg-hover{
+	display: block;
+    animation-name: opacity;
+
+
+
+}
+.col-md-12.lado-foto:hover .block-opacity-info{
+	display: block;
+    animation-name: opacity;
+    animation-duration: 1s;
+
+}
+@keyframes opacity {
+    0%   {	opacity: 0;}
+    100% {	opacity: .99;}
+
+}
+
+
+
+
+/*SOLUÇÕES*/
+.solucoes-fluid {
+	background: url(images/bg-solucoes_02.jpg);
+	background-size: cover;
+}
+.row.solucoes-text.text-center {
+	background:  #f08e4a;
+	padding: 38px 0;
+}
+.block-solucoes {
+
+	border: 5px solid #f08e4a;
+}
+.solucoes-text {
+	color: #fff;
+	font-size: 32px;
+}
+.solucoes-text .text-light {
+	font-family: "gotham_light", Cursive;
+}
+
+.solucoes-text .text-bold {
+    font-family: "gotham_bold", Cursive;
+}
+
+@media (min-width: 992px){
+.block-solucoes.col-md-6{
+    width: 47%;
+    margin: 0 11px;
+    	margin-top: 30px;
+	margin-bottom: 49px;
+}
+}
+
+.solucoes-topics span {
+	    font-family: "gotham_bold", Cursive;
+	    font-size: 18px;
+	    color: #fff;
+}
+.solucoes-topics > .row {
+    padding: 10px 0;
+}
+.btn-solucoes a {
+background: #f08e4a;
+    color: #fff;
+    /* padding: 16px 83px; */
+    display: block;
+    padding: 16px;
+}
+span.text-light {
+	font-family: "gotham_light", Cursive;
+}
+span.text-bold {
+    font-family: "gotham_bold", Cursive;
+}
+
+
+
+/*DIFERENCIAIS*/
+.col-md-12.lado-foto-2, .col-md-6.lado-foto-2 {
+	padding: 0;
+}
+
+
+.col-md-12.lado-foto-2:hover .bg-hover{
+	display: block;
+    animation-name: opacity;
+
+
+
+}
+.col-md-12.lado-foto-2:hover .block-opacity-info{
+	display: block;
+    animation-name: opacity;
+    animation-duration: 1s;
+
+}
+@keyframes opacity {
+    0%   {	opacity: 0;}
+    100% {	opacity: .99;}
+
+}
+.col-md-12.parag {
+	padding: 0;
+}
+.parag p {
+	font-family: "gotham_light", Cursive;
+	font-size: 16px;
+	color: #535e72;
+	    margin-top: 13px;
+}
+.diferenciais-fluid {
+	background: url(images/bg-diferenciais_02.jpg);
+	background-size: cover;
+}
+.diferenciais-text h1 {
+	font-size: 32px;
+	color: #68bac6;
+	margin-top: 57px;
+	margin-bottom: 59px;
+}
+.diferenciais-sobrenos {
+	background: url(images/estoque_tudo_sobre_nos222_02.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.diferenciais-area-text {
+	color: #535e72;
+    font-size: 24px;
+    font-family: "gotham_bold", Cursive;
+    margin-top: 33px;
+    margin-bottom: 48px;
+
+
+    overflow: hidden;
+ /*   border-radius: 50%;*/
+    /* border: 2px solid #2ca8b7; */
+    width: 250px;
+    /* height: 250px; */
+    /* margin: 0 auto; */
+    left: 50%;
+    margin-left: -124px;
+}
+
+.lado-foto-2.dif-fotos img{
+/*	width: 100%;
+    height: 255px;
+   border: 2px solid #2ca8b7;
+    border-radius: 50%;*/
+}
+/*.col-md-12.lado-foto.dif-fotos {
+	overflow: hidden;
+	border-radius: 50%;
+	  border: 2px solid #2ca8b7;
+}*/
+.col-md-12.lado-foto-2.dif-fotos {
+    overflow: hidden;
+    border-radius: 50%;
+/*    border: 2px solid #2ca8b7;*/
+    width:250px;
+    height: 250px;
+    margin: 0 auto;
+    left: 50%;
+    margin-left: -125px;
+}
+/*CHAMADAS*/
+.chamadas-fluid {
+	background: #f4f4f4;
+	background: url(images/bg-chamadas_03.jpg);
+	padding: 50px;
+}
+
+
+.map.container-fluid {
+	padding: 0;
+}
+
+
+
+.blog-fluid {
+	background: url(images/gb-blog_02.jpg);
+    background-repeat: repeat-x;
+    margin-bottom: 60px;
+}
+.blog-title-main h1 {
+	color: #fff;
+	margin: 46px 0;
+}
+
+.blog-text span{
+	color: #535e72;
+	font-size: 18px;
+	font-family: "gotham_bold", Cursive;
+}
+.blog-text-p p {
+	font-size: 16px;
+	font-family: "gotham_light", Cursive;
+}
+.blog-text {
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+
+
+
+
+
+.mensagem-fluid h1 {
+	color: #fff;
+	margin: 37px 0;
+}
+.mensagem-fluid {
+	background: url(images/bg-mensagem_02.jpg);
+/*	background-repeat: repeat-x;*/
+	border-bottom:5px solid #f47c45;
+}
+
+
+
+.form-fluid {
+	background: url(images/bg-forn_02.jpg);
+	background-size: cover;
+}
+
+.form-group input, .form-group textarea {
+	background-color: #f8f8f8;
+    background-image: none;
+    padding: 20px 20px;	
+    border:0;
+}
+.btn.btn-default {
+     background-color: #f08e4a;
+    border-color: #ccc;
+    padding: 30px 54px;
+    color: #fff;
+}
+
+
+
+.form-group ::-webkit-input-placeholder {
+   color: #535e72;
+	font-family: "gotham_bold", Cursive;
+   font: 16px ;
+}
+
+.form-group :-moz-placeholder {
+   color: #535e72;
+	font-family: "gotham_bold", Cursive;
+   font: 16px ;
+}
+
+.form-group ::-moz-placeholder {
+   color: #535e72;
+	font-family: "gotham_bold", Cursive;
+   font: 16px;
+}
+
+.form-group :-ms-input-placeholder {
+   color: #535e72;
+	font-family: "gotham_bold", Cursive;
+   font: 16px;
+}
+
+
+.form-box {
+	margin: 50px 0;
+}
+
+
+@media (min-width: 768px){
+.textarea.col-sm-12 {
+    width: 100%;
+    padding: 0 19px;
+}
+}
+
+@media (min-width: 992px){
+.inputs-box.col-md-6 {
+    width: 49%;
+    margin: 0.5%;
+}
+}
+
+
+
+
+
+
+
+
+
+/*RODAPÉ*/
+.rodape-fluid {
+	background:url(images/bg-rodape_02.jpg);
+	background-size: cover;
+}
+
+.footer-1 p, .footer-2 p, .footer-3 p {
+	color: #fff;
+	font-size: 16px;
+	
+}
+.footer-2 p.texto-footer-p {
+		font-family: "gotham_light", Cursive;
+}
+.footer-1 ul, .footer-3 ul {
+	margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer-1 li, .footer-3 li {
+	color: #fff;
+	margin: 5px 0;
+}
+.footer-3 li a {
+	color: #fff;
+	font-family: "gotham_light", Cursive;
+}
+.footer-1 li a {
+	color: #f08e4a;
+	font-family: "gotham_bold", Cursive;
+	font-size: 16px;	
+}
+.rodape-box {
+	margin-top: 65px;
+	margin-bottom: 145px;
+}
+
+
+.copy-fluid {
+	background: url(images/bg-copyright_02.jpg);
+	background-size: cover;
+}
+
+.text-rodape span {
+	color: #fff;
+	padding: 25px;
+	font-size: 14px;
+}
+.contato-texto-box.col-md-10{
+	padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*============================INTERNAS============================*/
+.bg-internas {
+	background: url(images/bg-internas_02.jpg);
+	background-size: cover;
+	height: 100px;
+}
+.interna-fluid-texto .text-bold {
+	font-family: "gotham_bold", Cursive;
+	color: #68bac6;
+}
+.interna-fluid-texto {
+	padding: 10px 0;
+}
+.interna-fluid-texto a {
+color: #535e72;
+font-size: 16px;
+font-weight: bold;
+
+}
+
+.blog-box h1{
+	font-family: "gotham_bold", Cursive;
+	color: #68bac6;
+	font-size: 18px;
+}
+
+.blog-box p {
+	color: #535e72;
+	font-family: "gotham_light", Cursive;
+	font-size: 16px;
+}
+.blog-box a.more {
+	color: #f08e4a;
+	font-family: "gotham_bold", Cursive;
+	font-size: 16px;
+}
+
+
+.single h1 {
+	font-family: "gotham_bold", Cursive;
+    color: #68bac6;
+    font-size: 31px;
+}
+
+.single p {
+	color: #535e72;
+	font-family: "gotham_light", Cursive;
+	font-size: 16px;	
+}
+.single.col-md-12 {
+    padding: 20px 0;
+}
+a.back {
+	    background: #f08e4a;
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 19px;
+   	font-family: "gotham_bold", Cursive; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CALCULE ESPACO*/
+.calcule-espaco-title h2 {
+	color: #535e72;
+	font-size: 24px;
+	font-family: "gotham_bold", Cursive;
+}
+.tabela-box-pequeno, .tabela-box-medio,   .tabela-box-grande{
+	font-family: "gotham_bold", Cursive;
+	font-size: 20px;
+	color: #fff;
+}
+
+ .tabela-box-pequeno li {
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background:url(images/tabela-box-pequeno-dark_03.png);
+}
+.tabela-box-pequeno li:nth-of-type(odd) {
+	background: url(images/tabela-box-pequeno-light_03.png);
+
+}
+
+
+
+
+ .tabela-box-medio li {
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background:url(images/tabela-box-medio-dark_03.png);
+}
+.tabela-box-medio li:nth-of-type(odd) {
+	background: url(images/tabela-box-medio-light_03_03.png);
+
+}
+
+
+ .tabela-box-grande li {
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    background:url(images/tabela-box-grande-dark_03.png);
+}
+.tabela-box-grande li:nth-of-type(odd) {
+	background: url(images/tabela-box-grande-light_03.png);
+
+}
+
+
+
+
+.texto-boxes p {
+		font-family: "gotham_light", Cursive;
+		font-size: 15.96px;
+		color: #535e72;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PARA SUA EMPRESA*/
+.para-sua-empresa-fluid {
+background: url(images/estoque_tudo_solucoes_para_sua_empresa-bg_02.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+border-bottom: 5px solid #f47c45;
+}
+.para-sua-empresa-texto-um p{
+font-family: "gotham_light", Cursive;
+color: #fff;
+font-size: 18px;
+padding: 25px 0;
+}
+
+.itens-solucoes p {
+	font-family: "gotham_bold", Cursive;
+	font-size: 24px;
+	color: #169eaf;
+}
+.solucoes-fluid-itens {
+	padding-top: 50px;
+	padding-bottom: 65px;
+}
+.linha-um {
+	margin-bottom: 80px;
+}
+@media(max-width: 767px){
+	.container-itens a {
+	background: #f08e4a;
+    padding: 20px 2px;
+    color: #fff;
+    font-family: "gotham_bold", Cursive;
+    font-size: 13px;
+}
+}
+@media(min-width: 768px){
+.container-itens a {
+	background: #f08e4a;
+    padding: 20px 102px;
+    color: #fff;
+    font-family: "gotham_bold", Cursive;
+    font-size: 18px;
+}
+}
+
+.row.linha-dois {
+    margin-bottom: 59px;
+}
+
+.col-md-4.text-center.itens-solucoes {
+    margin: 40px 0;
+}
+
+img.width-100 {
+	width: 100%;
+	height: auto;
+}
+
+.mobile-menu {
+	background: #ff8750;
+}
+.navbar.navbar-default.default-mobile-menu {
+	background: #ff8750;
+	border:none;
+	margin-bottom: 0;
+}
+.navbar.navbar-default.default-mobile-menu a {
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+}
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+    background: #68bac6;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff !important;
+}
+.container-fluid.interna-fluid-texto {
+    padding: 24px;
+}
+.interna-fluid-texto .text-bold {
+    text-transform: uppercase;
+}
+
+#menu-footer a:after {
+	content: " >>";
+	color: #fff;
+	font-size: 9px;
+}
+#menu-footer .current-menu-item {
+	background: transparent;
+}
+
+.categoria-looping {
+	background: url(images/estoque_tudo_blog_post_03.jpg);
+	background-size: cover;
+	min-height: 400px;
+}
+.categoria-looping ul {
+	list-style: none;
+	padding: 0;
+}
+ li.categories{
+ 	font-family: "gotham_bold", Cursive;
+	color: #fff;
+	font-size: 17px;
+	text-transform: uppercase;
+	margin: 5px;
+}
+li.categories a {
+	font-family: "gotham_light", Cursive;
+
+		color: #fff;
+	font-size: 17px;
+	
+}
+.margin-blog {
+	margin-bottom: 40px;
+}
