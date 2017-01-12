@@ -427,8 +427,9 @@ span.text-bold {
 	font-size: 18px;
 	font-family: "gotham_bold", Cursive;
 }
-.blog-text-p p {
+.blog-text-p a {
 	font-size: 16px;
+	color: #000;
 	font-family: "gotham_light", Cursive;
 }
 .blog-text {
