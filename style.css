@@ -744,6 +744,8 @@ a.back {
 /*PARA SUA EMPRESA*/
 .para-sua-empresa-fluid {
 background: url(images/estoque_tudo_solucoes_para_sua_empresa-bg_02.jpg);
+background: #15878f;
+padding: 20px 0;
 background-repeat: no-repeat;
 background-size: cover;
 border-bottom: 5px solid #f47c45;
@@ -752,7 +754,7 @@ border-bottom: 5px solid #f47c45;
 font-family: "gotham_light", Cursive;
 color: #fff;
 font-size: 18px;
-padding: 25px 0;
+padding: 9px 0;
 }
 
 .itens-solucoes p {
@@ -860,4 +862,43 @@ li.categories a {
 }
 .margin-blog {
 	margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.busca.modal-content {
+	    background-color: #0598aa;
+}
+.busca.modal-content .modal-title {
+    margin: 0;
+    line-height: 1.42857143;
+    color: #fff;
+    font-size: 20px;
+    font-family: monospace;
+}
+.btn-search.btn.btn-default {
+    background-color: #f08e4a;
+    border-color: #ccc;
+     padding: 10px 14px; 
+    color: #fff;
+    width: 100%;
+}
+.busca .input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+}
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid #060606;
 }

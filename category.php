@@ -19,20 +19,14 @@
   <?php
 
     // set up our archive arguments
-    $archive_args = array(
-      post_type => 'post',    // get only posts
-      'posts_per_page'=> -1   // this will display all posts on one page
-    );
-
-    // new instance of WP_Quert
-    $archive_query = new WP_Query( $archive_args );
+   global $query_string; query_posts( $query_string . '&order=DESC' );
 
   ?>
 
 
     <?php $date_old = ""; // assign $date_old to nothing to start ?>
  <?php $i = 0; ?>
-    <?php while ( $archive_query->have_posts() ) : $archive_query->the_post(); // run the custom loop ?>
+    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <?php $i++; ?>
       <?php $date_new = get_the_time("F Y"); // get $date_new in "Month Year" format ?>
 
@@ -56,11 +50,14 @@
                   echo '</div><div class="row margin-blog">';
                   $i = 0;
               } ?>
-        <?php endwhile; ?>
+ <?php endwhile; else : ?>
+  <p><?php _e( 'Desculpa, nenhuma postagem encontrada.' ); ?></p>
+<?php endif; ?>
+                     
+
         </div>
       
-     
-      <?php wp_reset_query(); ?>
+
               </div>     
  
     <div class="col-md-4 categoria-looping">

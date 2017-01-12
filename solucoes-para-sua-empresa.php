@@ -1,4 +1,4 @@
-        <?php /** Template Name: Soluções para você */ ?>
+        <?php /** Template Name: Soluções para sua empresa */ ?>
        <?php get_header(); ?>
  <div class="bg-internas container-fluid">
         </div>

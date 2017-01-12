@@ -7,6 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/bootstrap.css">
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/bxslider/jquery.bxslider.css">
+     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/animate.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
     <title>Bootstrap 101 Template</title>
 
@@ -22,11 +23,34 @@
     <?php wp_head(); ?>
   </head>
   <body>
+<!-- Small modal -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="busca modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Faça sua Busca</h4>
+      </div>
+    <div class="input-group">
+        <form role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+          <input type="text" class="form-control" placeholder="Busca..." name="s">
+          <span class="input-group-btn">
+            <button class="btn-search btn btn-default"  type="submit"> <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
+          </span>           
+        </form>
+    </div>
+    </div>
+  </div>
+</div>
 
         <div class="container-fluid topo-fluid visible-md visible-lg visible-sm">
           <div class="container">
             <div class="topo tel">
-                <span class="pull-right"><span class="text-light">+55 (71) <strong class="text-bold">3030.3030</strong></span> <a href="<?php echo get_site_url(); ?>/blog" class="text-light">Blog</a>   <span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+                <span class="pull-right"><span class="text-light">+55 (71) <strong class="text-bold">3030.3030</strong></span> <a href="<?php echo get_site_url(); ?>/blog" class="text-light">Blog</a><span  data-toggle="modal" data-target="#myModal" class="glyphicon glyphicon-search" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm" aria-hidden="true"></span></span>
             </div>
           </div>
         </div>
@@ -59,7 +83,7 @@
                 )
             );
         ?>               
-               
+
 
 
             </div>
