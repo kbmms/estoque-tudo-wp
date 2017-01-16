@@ -1,12 +1,12 @@
        <?php /** Template Name: Tamanho do Box */ ?>
        <?php get_header(); ?>
-<div class="bg-internas container-fluid">
-        </div>
+       <div class="bg-internas container-fluid">
+       </div>
 
-      <div class="container-fluid interna-fluid-texto">
+       <div class="container-fluid interna-fluid-texto">
         <div class="container text-center">
-              <?php wp_custom_breadcrumbs(); ?>
-              <h1><span class="text-light"></span> <span class="text-bold">TAMANHO DO BOX</span></h1>          
+          <?php wp_custom_breadcrumbs(); ?>
+          <h1><span class="text-light"></span> <span class="text-bold">TAMANHO DO BOX</span></h1>          
         </div>
       </div>
 
@@ -15,35 +15,35 @@
           <h2>A Estoque Tudo tem o espaço perfeito para suas necessidades</h2>
         </div>
       </div>
-  <br><br>
+      <br><br>
 
       <div class="container-fluid">
         <div class="container">
 
- <?php
-       
-      $args = array(
+         <?php
+         
+         $args = array(
           'post_type' => 'tamanho_do_box',
           'showposts' => -1,
           'order' => 'ASC'
-      );
-       
+          );
+         
       // Custom query.
-      $query = new WP_Query( $args );
- 
+         $query = new WP_Query( $args );
+         
       // Check that we have query results.
-      if ( $query->have_posts() ) {
-      $i = 0;
+         if ( $query->have_posts() ) {
+          $i = 0;
       // Start looping over the query results.
-     while ( $query->have_posts() ) {
-      $i++;
-        $query->the_post(); ?>
-        
-              <?php if ($i <= 1) { ?>
-          <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3">
-            <?php the_post_thumbnail('full', array( 'class' => 'img-responsive' )) ?>
-            <div class="tabela-box-pequeno">
-            <ul class="list-unstyled text-center">
+          while ( $query->have_posts() ) {
+            $i++;
+            $query->the_post(); ?>
+            
+            <?php if ($i <= 1) { ?>
+            <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3">
+              <?php the_post_thumbnail('full', array( 'class' => 'img-responsive' )) ?>
+              <div class="tabela-box-pequeno">
+                <ul class="list-unstyled text-center">
 
                   <?php
 
@@ -55,117 +55,117 @@
 
                   foreach ($char_split as $caracteristica):
 
-                  ?>
+                    ?>
 
-                    <li>
-                      <div class="icone background-g hidden-xs">
-                        <i class="fa fa-check" aria-hidden="true"></i>
-                      </div>
-                      <div class="texto fonte-medium">
-                        <p><?php echo $caracteristica; ?></p>
-                      </div>
-                    </li>
+                  <li>
+                    <div class="icone background-g hidden-xs">
+                      <i class="fa fa-check" aria-hidden="true"></i>
+                    </div>
+                    <div class="texto fonte-medium">
+                      <p><?php echo $caracteristica; ?></p>
+                    </div>
+                  </li>
 
-                  <?php endforeach; ?>
+                <?php endforeach; ?>
 
-                </ul>              
+              </ul>              
             </div>
             <div class="texto-boxes">
               <?php the_content() ?>
             </div>
           </div>
-    <?php
-         }else if ($i <= 2) { ?>
+          <?php
+        }else if ($i <= 2) { ?>
 
-   <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3">
-             <?php the_post_thumbnail('full', array( 'class' => 'img-responsive' )) ?>
-            <div class="tabela-box-medio">
-       <ul class="list-unstyled text-center">
+        <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3">
+         <?php the_post_thumbnail('full', array( 'class' => 'img-responsive' )) ?>
+         <div class="tabela-box-medio">
+           <ul class="list-unstyled text-center">
 
-                  <?php
-
-                  // PUXANDO O CAMPO DO ACF E FAZENDO O EXPLODE DA VÍRGULA,
-                  // FAZENDO UM FOREACH PARA DAR LOOP NAS MESMAS.
-                  $char = get_field('tamanho_do_box');
-
-                  $char_split = explode(",", $char);
-
-                  foreach ($char_split as $caracteristica):
-
-                  ?>
-
-                    <li>
-                      <div class="icone background-g hidden-xs">
-                        <i class="fa fa-check" aria-hidden="true"></i>
-                      </div>
-                      <div class="texto fonte-medium">
-                        <p><?php echo $caracteristica; ?></p>
-                      </div>
-                    </li>
-
-                  <?php endforeach; ?>
-
-                </ul>                 
-            </div>            
-            <div class="texto-boxes">
-             <?php the_content() ?>
-            </div>            
-          </div>
             <?php
-         }else { ?>
-
-
-
-        <div class="col-md-5 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3">
-             <?php the_post_thumbnail('full', array( 'class' => 'img-responsive' )) ?>
-            <div class="tabela-box-medio">
-       <ul class="list-unstyled text-center">
-
-                  <?php
 
                   // PUXANDO O CAMPO DO ACF E FAZENDO O EXPLODE DA VÍRGULA,
                   // FAZENDO UM FOREACH PARA DAR LOOP NAS MESMAS.
-                  $char = get_field('tamanho_do_box');
+            $char = get_field('tamanho_do_box');
 
-                  $char_split = explode(",", $char);
+            $char_split = explode(",", $char);
 
-                  foreach ($char_split as $caracteristica):
+            foreach ($char_split as $caracteristica):
 
-                  ?>
+              ?>
 
-                    <li>
-                      <div class="icone background-g hidden-xs">
-                        <i class="fa fa-check" aria-hidden="true"></i>
-                      </div>
-                      <div class="texto fonte-medium">
-                        <p><?php echo $caracteristica; ?></p>
-                      </div>
-                    </li>
+            <li>
+              <div class="icone background-g hidden-xs">
+                <i class="fa fa-check" aria-hidden="true"></i>
+              </div>
+              <div class="texto fonte-medium">
+                <p><?php echo $caracteristica; ?></p>
+              </div>
+            </li>
 
-                  <?php endforeach; ?>
+          <?php endforeach; ?>
 
-                </ul>                 
-            </div>            
-            <div class="texto-boxes">
-             <?php the_content() ?>
-            </div>            
-          </div>
+        </ul>                 
+      </div>            
+      <div class="texto-boxes">
+       <?php the_content() ?>
+     </div>            
+   </div>
+   <?php
+ }else { ?>
+
+
+
+ <div class="col-md-5 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3">
+   <?php the_post_thumbnail('full', array( 'class' => 'img-responsive' )) ?>
+   <div class="tabela-box-medio">
+     <ul class="list-unstyled text-center">
+
+      <?php
+
+                  // PUXANDO O CAMPO DO ACF E FAZENDO O EXPLODE DA VÍRGULA,
+                  // FAZENDO UM FOREACH PARA DAR LOOP NAS MESMAS.
+      $char = get_field('tamanho_do_box');
+
+      $char_split = explode(",", $char);
+
+      foreach ($char_split as $caracteristica):
+
+        ?>
+
+      <li>
+        <div class="icone background-g hidden-xs">
+          <i class="fa fa-check" aria-hidden="true"></i>
+        </div>
+        <div class="texto fonte-medium">
+          <p><?php echo $caracteristica; ?></p>
+        </div>
+      </li>
+
+    <?php endforeach; ?>
+
+  </ul>                 
+</div>            
+<div class="texto-boxes">
+ <?php the_content() ?>
+</div>            
+</div>
 
 
 
 
-       <?php  }     ?>
+<?php  }     ?>
 
-        <?php  
-        } ?>
-  
- 
-      <?php }
- 
+<?php  
+} ?>
+
+
+<?php }
+
       // Restore original post data.
-      wp_reset_postdata();
-       
-      ?>
+wp_reset_postdata();
+
+?>
 
 <!-- 
           <div class="col-md-3">
@@ -212,7 +212,7 @@
           </div> -->
         </div>
       </div>
-<?php get_template_part( 'templates/como-funciona-itens', 'como-funciona-itens' ); ?>
+      <?php get_template_part( 'templates/como-funciona-itens', 'como-funciona-itens' ); ?>
 
 <!--         <div class="container-fluid">
             <div class="container">
@@ -272,7 +272,7 @@
           </div>  -->
 
 
-<br><br>
+          <br><br>
 
-<?php get_template_part( 'templates/link-com-banners', 'link-com-banners' ); ?>
-            <?php get_footer(); ?>
+          <?php get_template_part( 'templates/link-com-banners', 'link-com-banners' ); ?>
+          <?php get_footer(); ?>
