@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="<?php bloginfo('template_url')?>/bxslider/jquery.bxslider.css">
      <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/animate.css">
     <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
-    <title>Bootstrap 101 Template</title>
+    <title>Estoque Tudo</title>
 
     <!-- Bootstrap -->
     <link href="<?php bloginfo('template_url')?>/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +27,7 @@
 
 
 
-<!-- Modal -->
+<!-- Modal Aparece quando clica em pesquisa-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="busca modal-content">
@@ -61,28 +61,28 @@
               <img src="<?php bloginfo('template_url')?>/images/logo-estoque_02.png" height="183" width="165" alt="">
             </div>
               
-                        <?php
-            wp_nav_menu(
-                $args = array(
-                    'menu' => 'principal',
-                    'container' => 'ul',
-                    'container_class' => 'nav navbar-nav ',
-                    'container_id' => '',
-                    'menu_class' => 'nav navbar-nav menu-direita-one pull-right',
-                    'menu_id' => '',
-                    'echo' => true,
-                    'fallback_cb' => 'wp_page_menu',
-                    'before' => '',
-                    'after' => '',
-                    'link_before' => '',
-                    'link_after' => '',
-                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                    'depth' => 0,
-                    'walker' => new WPDocs_Walker_Nav_Menu(),
-                    'theme_location' => 'principal'
-                )
-            );
-        ?>               
+                    <?php
+                        wp_nav_menu(
+                            $args = array(
+                                'menu' => 'principal',
+                                'container' => 'ul',
+                                'container_class' => 'nav navbar-nav ',
+                                'container_id' => '',
+                                'menu_class' => 'nav navbar-nav menu-direita-one pull-right',
+                                'menu_id' => '',
+                                'echo' => true,
+                                'fallback_cb' => 'wp_page_menu',
+                                'before' => '',
+                                'after' => '',
+                                'link_before' => '',
+                                'link_after' => '',
+                                'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                'depth' => 0,
+                                'walker' => new WPDocs_Walker_Nav_Menu(),
+                                'theme_location' => 'principal'
+                            )
+                        );
+                    ?>               
 
 
 
@@ -107,27 +107,27 @@
     <div class="collapse navbar-collapse mobile-menu" id="bs-example-navbar-collapse-1">
               
                         <?php
-            wp_nav_menu(
-                $args = array(
-                    'menu' => 'principal',
-                    'container' => 'ul',
-                    'container_class' => 'nav navbar-nav ',
-                    'container_id' => '',
-                    'menu_class' => 'nav navbar-nav menu-mobile',
-                    'menu_id' => '',
-                    'echo' => true,
-                    'fallback_cb' => 'wp_page_menu',
-                    'before' => '',
-                    'after' => '',
-                    'link_before' => '',
-                    'link_after' => '',
-                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-                    'depth' => 0,
-                    'walker' => new WPDocs_Walker_Nav_Menu(),
-                    'theme_location' => 'principal'
-                )
-            );
-        ?>  
+                            wp_nav_menu(
+                                $args = array(
+                                    'menu' => 'principal',
+                                    'container' => 'ul',
+                                    'container_class' => 'nav navbar-nav ',
+                                    'container_id' => '',
+                                    'menu_class' => 'nav navbar-nav menu-mobile',
+                                    'menu_id' => '',
+                                    'echo' => true,
+                                    'fallback_cb' => 'wp_page_menu',
+                                    'before' => '',
+                                    'after' => '',
+                                    'link_before' => '',
+                                    'link_after' => '',
+                                    'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                    'depth' => 0,
+                                    'walker' => new WPDocs_Walker_Nav_Menu(),
+                                    'theme_location' => 'principal'
+                                )
+                            );
+                        ?>  
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

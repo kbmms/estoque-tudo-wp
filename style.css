@@ -902,3 +902,18 @@ li.categories a {
     padding: 15px;
     border-bottom: 1px solid #060606;
 }
+.pagination{
+	border:1px solid #ccc;
+	
+	margin: 0 !important;
+}
+.pagination a, .pagination span {
+	font-size: 30px;
+	padding: 4px 10px;
+}
+.pagination a {
+	color: #f08e4a;
+}
+.text-center.pagination {
+	margin: 10px 0 !important;
+}

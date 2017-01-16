@@ -21,7 +21,7 @@
 
           
 <div class="container-fluid para-sua-empresa-fluid">
-  <div class="container text-center para-sua-empresa-texto-um">
+  <div class="container para-sua-empresa-texto-um">
   <?php the_content() ?>
   </div>
 </div>

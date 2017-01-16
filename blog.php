@@ -18,27 +18,14 @@
     <div class="row margin-blog">
   <?php
 
-    // set up our archive arguments
-    $archive_args = array(
-      post_type => 'post',    // get only posts
-      'posts_per_page'=> -1   // this will display all posts on one page
-    );
 
-    // new instance of WP_Quert
-    $archive_query = new WP_Query( $archive_args );
-
-  ?>
-
-
-    <?php $date_old = ""; // assign $date_old to nothing to start ?>
- <?php $i = 0; ?>
-    <?php while ( $archive_query->have_posts() ) : $archive_query->the_post(); // run the custom loop ?>
-  <?php $i++; ?>
-      <?php $date_new = get_the_time("F Y"); // get $date_new in "Month Year" format ?>
-
-      <?php if ( $date_old != $date_new ) : // run the check on $date_old and $date_new, and output accordingly ?>
-   
-      <?php endif; ?>
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+  $temp = $wp_query;
+  $wp_query = null;
+  $wp_query = new WP_Query();
+  $wp_query->query('showposts=2&post_type=post&paged='.$paged.'&cat='.$cat_id);
+  while ($wp_query->have_posts()) : $wp_query->the_post();
+?>
 
       <div class="col-md-6 blog-box animated bounceIn">
         <div class="col-md-12 foto-blog">
@@ -58,7 +45,26 @@
               } ?>
         <?php endwhile; ?>
         </div>
-      
+        <div class="text-center">
+        <div class="text-center pagination">
+          <?php
+            global $wp_query;
+           
+            $big = 999999999; // need an unlikely integer
+            echo '<div class="paginate-links">';
+              echo paginate_links( array(
+              'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+              'format' => '?paged=%#%',
+              'prev_text' => __('<<'),
+              'next_text' => __('>>'),
+              'current' => max( 1, get_query_var('paged') ),
+              'total' => $wp_query->max_num_pages
+              ) );
+            echo '</div>';
+          ?>
+    </div>    
+        </div>
+   
      
       <?php wp_reset_query(); ?>
               </div>     

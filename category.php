@@ -16,23 +16,22 @@
   <div class="container">
     <div class="col-md-8">
     <div class="row margin-blog">
-  <?php
+<?php
+  $currCat = get_category(get_query_var('cat'));
+  $cat_name = $currCat->name;
+  $cat_id   = get_cat_ID( $cat_name );
+?>
 
-    // set up our archive arguments
-   global $query_string; query_posts( $query_string . '&order=DESC' );
 
-  ?>
+<?php
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+  $temp = $wp_query;
+  $wp_query = null;
+  $wp_query = new WP_Query();
+  $wp_query->query('showposts=2&post_type=post&paged='.$paged.'&cat='.$cat_id);
+  while ($wp_query->have_posts()) : $wp_query->the_post();
+?>
 
-
-    <?php $date_old = ""; // assign $date_old to nothing to start ?>
- <?php $i = 0; ?>
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-  <?php $i++; ?>
-      <?php $date_new = get_the_time("F Y"); // get $date_new in "Month Year" format ?>
-
-      <?php if ( $date_old != $date_new ) : // run the check on $date_old and $date_new, and output accordingly ?>
-   
-      <?php endif; ?>
 
       <div class="col-md-6 blog-box animated bounceIn">
         <div class="col-md-12 foto-blog">
@@ -50,16 +49,33 @@
                   echo '</div><div class="row margin-blog">';
                   $i = 0;
               } ?>
- <?php endwhile; else : ?>
-  <p><?php _e( 'Desculpa, nenhuma postagem encontrada.' ); ?></p>
-<?php endif; ?>
+<?php endwhile; ?>
                      
 
+   
         </div>
-      
+        <div class="text-center">
+        <div class="text-center pagination">
+          <?php
+            global $wp_query;
+           
+            $big = 999999999; // need an unlikely integer
+            echo '<div class="paginate-links">';
+              echo paginate_links( array(
+              'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+              'format' => '?paged=%#%',
+              'prev_text' => __('<<'),
+              'next_text' => __('>>'),
+              'current' => max( 1, get_query_var('paged') ),
+              'total' => $wp_query->max_num_pages
+              ) );
+            echo '</div>';
+          ?>
+    </div>    
+        </div>  
 
               </div>     
- 
+ <br>
     <div class="col-md-4 categoria-looping">
       <ul>
           <?php wp_list_categories( array(
