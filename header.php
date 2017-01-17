@@ -58,9 +58,9 @@
         <div class="container">
           <div class="topo tel">
             <div class="logo pull-left">
-              <img src="<?php bloginfo('template_url')?>/images/logo-estoque_02.png" height="183" width="165" alt="">
+            <a href="#"><img src="<?php bloginfo('template_url')?>/images/logo-estoque_02.png" height="183" width="165" alt=""></a>
             </div>
-            
+
             <?php
             wp_nav_menu(
               $args = array(
@@ -105,7 +105,7 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse mobile-menu" id="bs-example-navbar-collapse-1">
-              
+
               <?php
               wp_nav_menu(
                 $args = array(

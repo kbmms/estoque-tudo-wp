@@ -23,7 +23,11 @@
                 $temp = $wp_query;
                 $wp_query = null;
                 $wp_query = new WP_Query();
-                $wp_query->query('showposts=10&post_type=post&paged='.$paged.'&cat='.$cat_id);
+                $wp_query->query(array (
+'post__not_in' => array(276,280), 
+'post_type' => 'post',
+'paged' => $paged.'&cat='.$cat_id
+));
                 while ($wp_query->have_posts()) : $wp_query->the_post();
                 ?>
 
@@ -73,6 +77,7 @@
         <ul>
           <?php wp_list_categories( array(
             'orderby'    => 'name',
+            'exclude' => '1', 
             'show_count' => true
               // 'exclude'    => array( 10 )
             ) ); ?> 

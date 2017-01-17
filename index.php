@@ -150,7 +150,8 @@ else : ?>
     // set up our archive arguments
     $archive_args = array(
       post_type => 'post',    // get only posts
-      'showposts' => 4
+      'showposts' => 4,
+      'post__not_in' => array(276,280), 
       );
 
     // new instance of WP_Quert

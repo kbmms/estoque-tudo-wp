@@ -60,6 +60,14 @@
             auto:true
 
           });
+
+          $(".fancybox").on("click", function(){
+        $.fancybox({
+          href: this.href,
+          type: $(this).data("type")
+        }); // fancybox
+        return false   
+    }); // on
         });
       </script>
       <?php wp_footer(); ?>

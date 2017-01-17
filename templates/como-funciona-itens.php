@@ -12,7 +12,7 @@
         );
         $myposts = get_posts( $args );
         foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
- <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 ">
+ <div class="col-md-3 col-md-offset-0 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2 ">
  <div class="col-md-12 como-funciona-text">
     <h2><a href="<?php echo get_page_link( $page->ID ); ?>"><?php if (!is_home()) {the_field( 'numero_de_ordem', $page->ID ); ?>. <?php } ?> <?php the_title(); ?></a></h2>
   </div>

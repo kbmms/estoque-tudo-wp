@@ -25,8 +25,8 @@
          <p>Categoria: <strong><?php echo '<span>'. get_the_category( $id )[0]->name .'</span>'; ?></strong> </p>
          <h1>DICAS PARA ACABAR COM A BAGUNÇA NA SUA CASA</h1> 
          <br>
-         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis eius, neque. Accusantium rerum labore saepe in vero voluptatum, mollitia ipsum recusandae, officia eum earum aliquid omnis reiciendis numquam corrupti voluptatem voluptas incidunt. Fugit veritatis consectetur voluptate delectus eligendi dolorem numquam tempore provident eaque quam facere, atque perspiciatis necessitatibus, modi dignissimos asperiores at veniam. Doloremque enim facere nostrum expedita ea delectus eligendi explicabo velit est non ex id at doloribus neque quia quasi in, asperiores odio assumenda. Eos aspernatur deleniti dicta quaerat expedita delectus voluptate earum dolor provident nulla maxime repellat esse, architecto molestiae voluptas asperiores quos maiores fuga voluptatem qui!</p>
-         <br>
+         <?php the_content() ?>
+          <br>
          <a class="back" href="javascript:window.history.go(-1)">< voltar</a>
        </div>
 
@@ -35,6 +35,7 @@
       <ul>
         <?php wp_list_categories( array(
           'orderby'    => 'name',
+          'exclude' => '1',
           'show_count' => true
               // 'exclude'    => array( 10 )
           ) ); ?> 
