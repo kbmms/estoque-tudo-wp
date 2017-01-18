@@ -36,7 +36,7 @@
               <h4 class="modal-title" id="myModalLabel">Faça sua Busca</h4>
             </div>
             <div class="input-group">
-              <form role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+              <form role="search" class="search" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
                 <input type="text" class="form-control" placeholder="Busca..." name="s">
                 <span class="input-group-btn">
                   <button class="btn-search btn btn-default"  type="submit"> <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>

@@ -2,7 +2,7 @@
       <?php get_header(); ?>
       <div class="bg-internas container-fluid">
       </div>
-      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+     
         <div class="container-fluid interna-fluid-texto">
           <div class="container text-center">
             <?php wp_custom_breadcrumbs(); ?>
@@ -77,7 +77,7 @@
           </div>
         </div>
 
-
+        <br>
         <div class="container-fluid">
           <div class="container calcule-espaco-title text-center">
             <h2>Vídeos</h2>
@@ -87,43 +87,39 @@
 
         <div class="container-fluid">
           <div class="container">
+               <?php $query = new WP_Query( 'post_type=videos&order=ASC&showposts=-1' ); ?>
+               <?php  $i = 0; ?>
+               <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
+                <?php  $i++; ?>
 
-            <div class="col-md-6">
-              <a class="fancybox fancybox.iframe" data-type="iframe" href="https://www.youtube.com/embed/bwE8-xw06Dk">
-                <img src="http://localhost/estoque-tudo-wp/wp-content/uploads/2017/01/estoque_tudo_blog_post-full_03.jpg"  alt="" class="img-responsive"></a>
-              </div>
-              <div class="col-md-6 texto-boxes">
-                <div class="row">
-                  <div class="col-md-4">
-                    <a class="fancybox fancybox.iframe" data-type="iframe" href="https://www.youtube.com/embed/bwE8-xw06Dk">
-                      <img src="http://localhost/estoque-tudo-wp/wp-content/uploads/2017/01/estoque_tudo_blog_post-full_03.jpg"  alt="" class="img-responsive"></a></div>
-                      <div class="col-md-4"><img src="http://localhost/estoque-tudo-wp/wp-content/uploads/2017/01/estoque_tudo_blog_post-full_03.jpg"  alt="" class="img-responsive"></div>
-                      <div class="col-md-4"><img src="http://localhost/estoque-tudo-wp/wp-content/uploads/2017/01/estoque_tudo_blog_post-full_03.jpg"  alt="" class="img-responsive"></div>              
-                    </div>
-                    <br>
-                    <div class="row">
-                      <div class="col-md-4"><img src="http://localhost/estoque-tudo-wp/wp-content/uploads/2017/01/estoque_tudo_blog_post-full_03.jpg"  alt="" class="img-responsive"></div>
-                      <div class="col-md-4"><img src="http://localhost/estoque-tudo-wp/wp-content/uploads/2017/01/estoque_tudo_blog_post-full_03.jpg"  alt="" class="img-responsive"></div>
-                      <div class="col-md-4"><img src="http://localhost/estoque-tudo-wp/wp-content/uploads/2017/01/estoque_tudo_blog_post-full_03.jpg"  alt="" class="img-responsive"></div>              
-                    </div>
-                    <br>
-                    <div class="row">
-                      <div class="col-md-4"><img src="http://localhost/estoque-tudo-wp/wp-content/uploads/2017/01/estoque_tudo_blog_post-full_03.jpg"  alt="" class="img-responsive"></div>
-                      <div class="col-md-4"><img src="http://localhost/estoque-tudo-wp/wp-content/uploads/2017/01/estoque_tudo_blog_post-full_03.jpg"  alt="" class="img-responsive"></div>
-                      <div class="col-md-4"><img src="http://localhost/estoque-tudo-wp/wp-content/uploads/2017/01/estoque_tudo_blog_post-full_03.jpg"  alt="" class="img-responsive"></div>               
-                    </div>
+            <?php if($i == 1){ ?>
+            <div class="galerias-box col-md-6 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+             <?php }else{ ?>
+             <div class="galerias-box col-md-2 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+              <?php } ?>
+              <a class="fancybox fancybox.iframe" data-type="iframe" href="<?php the_field('url_do_video') ?>">
+
+                <?php if (get_field('capa_do_video')) { ?>
+                <img src="<?php the_field('capa_do_video') ?> "  alt="" class="width-100">
+                <?php }else{ ?>
+                <img src="http://localhost/estoque-tudo-wp/wp-content/uploads/2017/01/image8.png"  alt="" class="width-100">
+                <?php } ?>
+                </a>
+            </div>
 
 
 
-                  </div>
+               <?php endwhile;
+               wp_reset_postdata();
+               else : ?>
+               <p><?php _e( 'Desculpa, nenhuma postagem encontrada.' ); ?></p>
+               <?php endif; ?>
+
 
                 </div>
               </div>
 
 
-            <?php endwhile; else : ?>
-            <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-          <?php endif; ?>
           <br><br>
 
           <?php get_template_part( 'templates/link-com-banners', 'link-com-banners' ); ?>

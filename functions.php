@@ -139,6 +139,36 @@
 		      register_post_type('como-funciona-tipo',$args);
 
 
+
+		      $labels = array(
+		        'name' => _x('videos', 'post type general name'),
+		        'singular_name' => _x('video', 'post type singular name'),
+		        'add_new' => _x('Adicionar Novo', 'vídeo'),
+		        'add_new_item' => __('Adicionar Novo vídeo'),
+		        'edit_item' => __('Editar vídeo'),
+		        'new_item' => __('Novo vídeo'),
+		        'all_items' => __('Todos os Vídeos'),
+		        'view_item' => __('Ver  vídeo'),
+		        'search_items' => __('Procurar vídeo'),
+		        'not_found' =>  __('Nenhum vídeo encontrado'),
+		        'not_found_in_trash' => __('Nenhum vídeo encontrado'),
+		        'parent_item_colon' => '',
+		        'menu_name' => 'Vídeos'
+		      );
+		      $args = array(
+		        'labels' => $labels,
+		        'public' => true,
+		        'publicly_queryable' => true,
+		        'show_ui' => true,
+		        'show_in_menu' => true,
+		        'query_var' => true,
+		        'rewrite' => true,
+		        'capability_type' => 'post',
+		        'hierarchical' => false,
+		        'supports' => array( 'editor', 'title', 'page-attributes', 'thumbnail' )
+		      );
+		      register_post_type('videos',$args);
+
 		    }
 
 		    // Limite de caracteres

@@ -24,13 +24,15 @@
                 $wp_query = null;
                 $wp_query = new WP_Query();
                 $wp_query->query(array (
-'post__not_in' => array(276,280), 
-'post_type' => 'post',
-'paged' => $paged.'&cat='.$cat_id
-));
+                  'post__not_in' => array(276,280), 
+                  'post_type' => 'post',
+                  'paged' => $paged.'&cat='.$cat_id
+                  ));
+                $i = 0;
                 while ($wp_query->have_posts()) : $wp_query->the_post();
-                ?>
 
+                ?>
+                <?php  $i++; ?>
                 <div class="col-md-6 blog-box animated bounceIn">
                   <div class="col-md-12 foto-blog">
                    <?php the_post_thumbnail('medium', array('class' => 'img-responsive')) ?>

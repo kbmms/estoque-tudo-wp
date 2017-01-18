@@ -29,9 +29,10 @@
                 $wp_query = null;
                 $wp_query = new WP_Query();
                 $wp_query->query('showposts=10&post_type=post&paged='.$paged.'&cat='.$cat_id);
+                $i = 0;
                 while ($wp_query->have_posts()) : $wp_query->the_post();
                 ?>
-
+                <?php  $i++; ?>
 
                 <div class="col-md-6 blog-box animated bounceIn">
                   <div class="col-md-12 foto-blog">
@@ -80,6 +81,7 @@
         <ul>
           <?php wp_list_categories( array(
             'orderby'    => 'name',
+            'exclude' => '1',
             'show_count' => true
               // 'exclude'    => array( 10 )
             ) ); ?> 

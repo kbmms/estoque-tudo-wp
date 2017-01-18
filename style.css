@@ -36,6 +36,7 @@ Version 1.0
 }
 .tel span.glyphicon.glyphicon-search {
 	color: #000;
+	cursor: pointer;
 }
 
 
@@ -472,6 +473,28 @@ span.text-bold {
 }
 
 
+.search ::-webkit-input-placeholder  {
+	color: #fff !important;
+	font-weight: bolder !important;
+}
+.search :-moz-input-placeholder  {
+	color: #fff !important;
+	font-weight: bolder !important;
+}
+.search ::-moz-input-placeholder  {
+	color: #fff !important;
+	font-weight: bolder !important;
+}
+.search :-ms-input-placeholder  {
+	color: #fff !important;
+	font-weight: bolder !important;
+}
+.search input-placeholder  {
+	color: #fff !important;
+	font-weight: bolder !important;
+}
+
+
 
 .form-group ::-webkit-input-placeholder {
    color: #535e72 !important;
@@ -879,11 +902,19 @@ li.categories a {
 
 
 
-
+.search input.form-control {
+	height: 68px !important;
+    margin: 10px 0 !important;
+    border-radius: 8px !important;
+    background: #30919d !important;
+    border: 1px solid #077784 !important;
+    color: #fff !important;
+}
 
 
 .busca.modal-content {
-	    background-color: #0598aa;
+background-color: #0598aa;
+    padding: 32px;
 }
 .busca.modal-content .modal-title {
     margin: 0;
