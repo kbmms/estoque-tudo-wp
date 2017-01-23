@@ -6,7 +6,9 @@
    <div class="container-fluid interna-fluid-texto">
     <div class="container text-center">
       <?php wp_custom_breadcrumbs(); ?>
-      <h1><span class="text-light"></span> <span class="text-bold">BLOG</span></h1>          
+      <h1><span class="text-light"></span> <span class="text-bold">BLOG</span></h1>   
+
+      
     </div>
   </div>
 
@@ -14,12 +16,20 @@
 
   <div class="container-fluid">
     <div class="container">
-    <div class="col-md-8">
+ 
 
+    <div class="col-md-8">
+    <div class="row btn-mais-menos">
+      <ul class="">
+        <li class="menos"  id="menos"><img src="<?php bloginfo('template_url'); ?>/images/Amenos.gif" alt=""></li>
+        <li class="normal" id="normal"><img src="<?php bloginfo('template_url'); ?>/images/Apadrao.gif" alt=""></li>
+        <li class="mais" id="mais"><img src="<?php bloginfo('template_url'); ?>/images/Amais.gif" alt=""></li>
+      </ul>
+    </div>
         <div class="col-md-12 foto-blog">
           <?php the_post_thumbnail('full', array('class' => 'img-responsive')) ?>
         </div>
-        <div class="single col-md-12">
+        <div class="single col-md-12 content">
          <?php $date_new = get_the_time("F Y"); ?>
          <p>Publicado em: <strong><?php echo $date_new; ?></strong></p> 
          <p>Categoria: <strong><?php echo '<span>'. get_the_category( $id )[0]->name .'</span>'; ?></strong> </p>

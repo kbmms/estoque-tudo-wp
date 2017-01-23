@@ -39,7 +39,7 @@
        <script src="<?php bloginfo('template_url')?>/bxslider/jquery.bxslider.min.js"></script>
 
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMiCVZPgiuu68reqq-lkfy4oiXf-vCypk&callback=initMap"></script>
+       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMiCVZPgiuu68reqq-lkfy4oiXf-vCypk&callback=initMap"></script>
 
 
        <!-- Arquivo de inicialização do mapa -->
@@ -56,12 +56,33 @@
           });
 
           $(".fancybox").on("click", function(){
-        $.fancybox({
-          href: this.href,
-          type: $(this).data("type")
+            $.fancybox({
+              href: this.href,
+              type: $(this).data("type")
         }); // fancybox
-        return false   
+            return false   
     }); // on
+
+
+
+          var fonte = 16;
+
+          $('#mais').click(function(){
+            if (fonte<18){
+              fonte = fonte+1;
+              $('.content p').css({'font-size' : fonte+'px'});
+            }
+          });
+          $('#menos').click(function(){
+            if (fonte>9){
+              fonte = fonte-1;
+              $('.content p').css({'font-size' : fonte+'px'});
+            }
+          });
+          $('#normal').click(function(){
+            fonte = 16;
+            $('.content p').css({'font-size' : fonte+'px'});
+          });
         });
       </script>
       <?php wp_footer(); ?>
