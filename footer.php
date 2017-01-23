@@ -39,14 +39,8 @@
        <script src="<?php bloginfo('template_url')?>/bxslider/jquery.bxslider.min.js"></script>
 
 
-       <!-- Maps API Javascript -->
-       <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMiCVZPgiuu68reqq-lkfy4oiXf-vCypk&callback=initMap"></script>
 
-       <!-- Caixa de informação -->
-       <script src="<?php bloginfo('template_url')?>/js-map/infobox.js"></script>
-
-       <!-- Agrupamento dos marcadores -->
-       <script src="<?php bloginfo('template_url')?>/js-map/markerclusterer.js"></script>
 
        <!-- Arquivo de inicialização do mapa -->
        <script src="<?php bloginfo('template_url')?>/js-map/mapa.js"></script>

@@ -321,6 +321,42 @@ if ( function_exists ('register_sidebar')) {
 	);
 } 
 
+/**
+ * Slightly Modified Options Framework
+ */
+require_once ('admin/index.php');
 
-    
+
+
+    //Customização da tela de login
+function cutom_login_logo() {
+	echo "<style type=\"text/css\">
+			body.login div#login h1 a {
+			background-image: url(".get_bloginfo('template_directory')."/images/logo-abrasivo.png);
+			-webkit-background-size: auto;
+			background-size: auto;
+			margin: 0 0 25px;
+			width: 320px;
+			}
+			body.login{
+				background: url(".get_bloginfo('template_directory')."/images/bg-abrasivo.jpg) no-repeat #12a89d center center fixed ;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+			}
+			.login #backtoblog a, .login #nav a, .login h1 a, .login #backtoblog a:hover, .login #nav a:hover, .login h1 a:hover{
+				color:#ffffff;
+			}
+			#login{
+				text-align:center;
+			}
+	</style>";
+}
+add_action( 'login_enqueue_scripts', 'cutom_login_logo' );
+
+function loginpage_custom_link() {
+	return 'http://www.abrasivodigital.com.br';
+}
+add_filter('login_headerurl','loginpage_custom_link');
  ?>

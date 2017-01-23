@@ -50,7 +50,10 @@
       <div class="container-fluid topo-fluid visible-md visible-lg visible-sm">
         <div class="container">
           <div class="topo tel">
-            <span class="pull-right"><span class="text-light">+55 (71) <strong class="text-bold">3030.3030</strong></span> <a href="<?php echo get_site_url(); ?>/blog" class="text-light">Blog</a><span  data-toggle="modal" data-target="#myModal" class="glyphicon glyphicon-search" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm" aria-hidden="true"></span></span>
+            <span class="pull-right"><span class="text-light">+55 (71) <strong class="text-bold">     <?php 
+     global $data;
+echo $data['test_text'];
+      ?> </strong></span> <a href="<?php echo get_site_url(); ?>/blog" class="text-light">Blog</a><span  data-toggle="modal" data-target="#myModal" class="glyphicon glyphicon-search" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm" aria-hidden="true"></span></span>
           </div>
         </div>
       </div>
@@ -58,7 +61,15 @@
         <div class="container">
           <div class="topo tel">
             <div class="logo pull-left">
-            <a href="#"><img src="<?php bloginfo('template_url')?>/images/logo-estoque_02.png" height="183" width="165" alt=""></a>
+            <a href="<?php bloginfo('url')?>">
+
+            <img src="<?php echo $data['media_upload_356']; ?>" height="183" width="165" alt="">
+      <?php 
+global $data;
+
+       ?> 
+
+            </a>
             </div>
 
             <?php

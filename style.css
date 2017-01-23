@@ -190,9 +190,10 @@ Version 1.0
 }
 .col-md-12.lado-foto, .col-md-6.lado-foto {
 	padding: 0;
+	overflow: hidden;
 }
 .lado-foto img {
-	width: 100%;
+	/*width: 100%;*/
 }
 .contador-blocks {
 	position: absolute;
@@ -203,6 +204,7 @@ Version 1.0
     font-size: 26px;
     font-family: "gotham_bold", Cursive;
     z-index: 999;
+    left: 0;
 }
 .block-opacity-info {
  	display: none;
@@ -315,6 +317,7 @@ span.text-bold {
 /*DIFERENCIAIS*/
 .col-md-12.lado-foto-2, .col-md-6.lado-foto-2 {
 	padding: 0;
+	overflow: hidden;
 }
 
 
@@ -462,7 +465,7 @@ span.text-bold {
 .form-group input, .form-group textarea {
 	background-color: #f8f8f8;
     background-image: none;
-    padding: 20px 20px;	
+    height: 40px;
     border:0;
 }
 .btn.btn-default {
@@ -502,24 +505,38 @@ span.text-bold {
    font: 16px !important;
 }
 
-.form-group :-moz-placeholder {
+.form-group :-moz-input-placeholder {
    color: #535e72  !important;
 	font-family: "gotham_bold", Cursive;
-   font: 16px !important;
+   font-size: 16px !important;
 }
 
-.form-group ::-moz-placeholder {
-   color: #535e72  !important;
-	font-family: "gotham_bold", Cursive;
-   font: 16px !important; 
+
+
+input.form-control:-moz-placeholder,
+textarea.form-control::-moz-placeholder { /* Firefox 18- */
+   color: #003768;
 }
 
+ input.form-control::-moz-placeholder,
+ textarea.form-control::-moz-placeholder {  /* Firefox 19+ */
+   color: #003768;
+}
 .form-group :-ms-input-placeholder {
    color: #535e72  !important;
 	font-family: "gotham_bold", Cursive;
    font: 16px !important;
 }
 
+ input.form-control:-moz-placeholder,
+ textarea.form-control::-moz-placeholder { /* Firefox 18- */
+   color: #003768;
+}
+
+ input.form-control::-moz-placeholder,
+ textarea.form-control::-moz-placeholder {  /* Firefox 19+ */
+   color: #003768;
+}
 
 .form-box {
 	margin: 50px 0;
@@ -969,4 +986,38 @@ background-color: #0598aa;
 .galerias-box.col-md-2
 {
 	padding: 2px;
+}
+.btn.btn-default {
+    background-color: #f08e4a;
+    border-color: #ccc;
+    padding: 30px 54px;
+    color: #fff;
+    border-radius: 0px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    height: auto;
+}
+.bodyImage {
+	text-align: center !important;
+}
+.bodyImage img {
+	width: 85px !important;
+}
+
+
+/*contact form 7*/
+div.wpcf7-validation-errors {
+    border: 2px solid #f7e700;
+    float: left;
+}
+span.wpcf7-not-valid-tip {
+    color: #68bac6 !important;
+    font-size: 1em;
+    display: block;
+}
+div.wpcf7-validation-errors {
+    border: 2px solid #f08e4a !important;
+    background: #f08e4a !important;
+    color: #fff !important;
+    font-weight: bold;
 }

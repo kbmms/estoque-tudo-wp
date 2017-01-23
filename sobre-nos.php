@@ -84,39 +84,7 @@
      <div class="container">
        <div class="form-box col-md-10 col-md-offset-1">
         
-        <form class="form-horizontal">
-          <div class="inputs-box col-md-6">
-            <div class="form-group">
-              
-             
-              <input type="text" class="form-control" id="nome" placeholder="Nome *">
-              
-            </div>                      
-          </div>
-          <div class="inputs-box col-md-6">
-            <div class="form-group">
-              
-              
-              <input type="email" class="form-control" id="email" placeholder="Email *">
-              
-            </div>                      
-          </div>
-
-
-          <div class="form-group">
-            
-            <div class="textarea col-sm-12">
-              <textarea class="form-control" rows="3" placeholder="Mensagem *"></textarea>
-            </div> 
-          </div>
-          
-          <div class="form-group">
-           <div class="col-sm-12">
-            <button type="submit" class="btn btn-default pull-right"> <span class="text-light">Enviar</span> <span class="text-bold">Mensagem</span></button>
-          </div>
-        </div>
-        
-      </form>                 
+       <?php echo do_shortcode('[contact-form-7 id="291" title="Formlário Home"]'); ?>
     </div>
   </div>             
 </div>
