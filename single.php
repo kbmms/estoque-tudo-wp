@@ -36,6 +36,7 @@
          <h1>DICAS PARA ACABAR COM A BAGUNÇA NA SUA CASA</h1> 
          <br>
          <?php the_content() ?>
+         <div class="fb-comments" data-href="http://www.estoquetudo.com.br" data-width="100%" data-numposts="5"></div>
           <br>
          <a class="back" href="javascript:window.history.go(-1)">< voltar</a>
        </div>
