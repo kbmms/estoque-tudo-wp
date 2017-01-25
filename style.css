@@ -138,7 +138,7 @@ Version 1.0
 .tel .text-light {
 	font-size: 15.70px;
 	font-family: "gotham_light", Cursive;
-
+margin: 0 3px;
 }
 .tel .text-bold {
 	font-size: 15.70px;
@@ -185,7 +185,7 @@ Version 1.0
 	font-family: "gotham_bold", Cursive;
 }
 .col-md-12.como-funciona-text {
-    margin-top: 47px;
+    margin-top:10px;
     margin-bottom: 30px;
     padding: 0;
 }
@@ -1028,4 +1028,30 @@ div.wpcf7-validation-errors {
 }
 .btn-mais-menos li {
 	display: inline-block;
+		cursor: pointer;
+}
+.row.btn-mais-menos.internas ul {
+	padding-left: 13px;
+}
+.search-mobile {
+	font-size: 33px;
+}
+.diferenciais-single span a{
+	font-size: 18px;
+	color: #000;
+	font-weight: bolder;
+
+}
+.sidebar-single h1 {
+ 
+    font-size: 17px !important;
+    text-align: center !important;
+
+}
+.diferenciais-area-text a {
+	color: #535e72;
+	font-size: 24px;
+}
+.col-md-12.categoria-looping {
+    margin-top: 30px;
 }

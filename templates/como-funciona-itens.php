@@ -17,7 +17,7 @@
     <h2><a href="<?php echo get_page_link( $page->ID ); ?>"><?php if (!is_home()) {the_field( 'numero_de_ordem', $page->ID ); ?>. <?php } ?> <?php the_title(); ?></a></h2>
   </div>
 
-
+                <a href="<?php the_permalink(); ?> ">
                   <div class="col-md-12 lado-foto">
                 <div class="bg-hover"></div>
                 <div class="block-opacity-info">
@@ -26,7 +26,7 @@
                  <?php echo get_the_post_thumbnail( $page->ID, 'medium' ); ?>
                   <span class="contador-blocks"><?php the_field( 'numero_de_ordem', $page->ID ); ?></span>
                 </div>
- 
+ </a>
 </div>
  <?php endforeach; wp_reset_postdata();?>
     </div>

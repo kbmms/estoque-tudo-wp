@@ -156,7 +156,7 @@ global $data;
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Estoque Tudo</a>
+              <a class="navbar-brand" href="<?php bloginfo('url')?>">Estoque Tudo</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -183,7 +183,8 @@ global $data;
                   'theme_location' => 'principal'
                   )
                 );
-                ?>  
+                ?> 
+                <span  data-toggle="modal" data-target="#myModal" class="glyphicon glyphicon-search search-mobile" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm" aria-hidden="true"></span>
               </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
           </nav>

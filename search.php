@@ -37,7 +37,7 @@
             <p> <img src="<?php bloginfo('template_url')?>/images/logo-estoque_02.png" height="183" width="165" alt=""></p>
             <h1>Desculpe, não econtrados nada com o termo inserido.</h1>
             <br><br><br><br><br>
-            <p><a href="http://estoquetudo.com.br">Voltar para home</a></p>
+            <p><a href="http://www.estoquetudo.com.br">Voltar para home</a></p>
             <br>
           </div>
 

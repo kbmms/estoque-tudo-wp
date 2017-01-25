@@ -24,7 +24,17 @@
               <?php the_post_thumbnail('full',array('class'=> 'img-responsive')); ?>
             </div>
             <div class="col-md-6 texto-boxes">
+            <div class="row btn-mais-menos internas">
+              <ul class="">
+                <li class="menos"  id="menos"><img src="<?php bloginfo('template_url'); ?>/images/Amenos.gif" alt=""></li>
+                <li class="normal" id="normal"><img src="<?php bloginfo('template_url'); ?>/images/Apadrao.gif" alt=""></li>
+                <li class="mais" id="mais"><img src="<?php bloginfo('template_url'); ?>/images/Amais.gif" alt=""></li>
+              </ul>
+            </div> 
+            <div class="content">
               <?php the_content(); ?>
+            </div>           
+              
             </div>
           </div>
         </div>

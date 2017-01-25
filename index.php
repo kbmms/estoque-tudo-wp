@@ -100,22 +100,25 @@
    <h1><span class="text-light">NOSSOS</span> <span class="text-bold">DIFERENCIAIS</span></h1>
  </div>
  <div class="container">
-   <?php $query = new WP_Query( 'post_type=diferenciais&order=ASC&showposts=-1' ); ?>
+   <?php $query = new WP_Query( 'post_type=diferenciais&showposts=-1&order=date' ); ?>
    <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-
+    
     <div class="col-md-3 col-sm-6 col-sm-offset-0 col-md-offset-0 col-xs-8 col-xs-offset-2">
-
+      <a href="<?php the_permalink(); ?> ">
       <div class="col-md-12 lado-foto-2 dif-fotos text-center">
         <div class="bg-hover"></div>
         <div class="block-opacity-info">
          <p><?php echo excerpt('20'); ?></p>
        </div>
-       <p><?php the_post_thumbnail(); ?></p>  
+
+
+       <p> <?php the_post_thumbnail(); ?></p>  
        
      </div>
+     </a>
      <div class="col-md-12 diferenciais-area-text text-center">
-      <span><?php the_title(); ?></span>
+      <span><a href="<?php the_permalink() ?> "><?php the_title(); ?></a> </span>
     </div>                  
   </div>
 
