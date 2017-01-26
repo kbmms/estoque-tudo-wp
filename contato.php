@@ -15,7 +15,7 @@
 
         <div class="container-fluid">
          <div class="container">
-           <div class="form-box col-md-10 col-md-offset-1">
+           <div class="form-box contato col-md-10 col-md-offset-1">
             
            
 <!--               <div class="inputs-box col-md-6">

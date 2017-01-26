@@ -38,7 +38,7 @@
                    <?php the_post_thumbnail('medium', array('class' => 'img-responsive')) ?>
                  </div>
                  <div class="col-md-12">
-                  <p>Publicado em: <strong><?php echo $date_new; ?></strong></p>
+                  <p>Publicado em: <strong> <?php the_time('j \d\e F \d\e Y') ?></strong></p>
                   <p>Categoria: <?php the_category(', '); ?></p>
                   <h1><span class="text-light"></span> <span class="text-bold"><?php the_title(); ?></span></h1> 
                   <p><?php echo excerpt('15'); ?></p>

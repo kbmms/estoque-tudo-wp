@@ -109,7 +109,7 @@
       <div class="col-md-12 lado-foto-2 dif-fotos text-center">
         <div class="bg-hover"></div>
         <div class="block-opacity-info">
-         <p><?php echo excerpt('20'); ?></p>
+         <p><?php the_field('diferenciais_descricao'); ?></p>
        </div>
 
 

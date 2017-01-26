@@ -130,7 +130,7 @@ Version 1.0
 @media(min-width: 768px){
 .texto-slide h1 {
 	font-family: "gotham_bold", Cursive;
-	font-size: 31px;
+	font-size: 25px;
 	color: #fff;
 	text-align: center;
 }
@@ -264,7 +264,7 @@ margin: 0 3px;
 }
 .row.solucoes-text.text-center {
 	background:  #f08e4a;
-	padding: 38px 0;
+	padding: 20px 0;
 }
 .block-solucoes {
 
@@ -297,7 +297,7 @@ margin: 0 3px;
 	    color: #fff;
 }
 .solucoes-topics > .row {
-    padding: 10px 0;
+    padding: 3px 0;
 }
 .btn-solucoes a {
 background: #f08e4a;
@@ -600,7 +600,7 @@ textarea.form-control::-moz-placeholder { /* Firefox 18- */
 	color: #fff;
 	font-family: "gotham_light", Cursive;
 }
-.footer-1 li a {
+.footer-1 li a, a.leia-mais {
 	color: #f08e4a;
 	font-family: "gotham_bold", Cursive;
 	font-size: 16px;	
@@ -724,6 +724,7 @@ a.back {
 	color: #535e72;
 	font-size: 24px;
 	font-family: "gotham_bold", Cursive;
+	margin: 0;
 }
 .tabela-box-pequeno, .tabela-box-medio,   .tabela-box-grande{
 	font-family: "gotham_bold", Cursive;
@@ -841,7 +842,7 @@ padding: 9px 0;
 }
 
 .col-md-4.text-center.itens-solucoes {
-    margin: 40px 0;
+    margin: 15px 0;
 }
 
 img.width-100 {
@@ -870,7 +871,7 @@ img.width-100 {
     background-color: #fff !important;
 }
 .container-fluid.interna-fluid-texto {
-    padding: 24px;
+    padding: 17px;
 }
 .interna-fluid-texto .text-bold {
     text-transform: uppercase;
@@ -888,7 +889,7 @@ img.width-100 {
 .categoria-looping {
 	background: url(images/estoque_tudo_blog_post_03.jpg);
 	background-size: cover;
-	min-height: 400px;
+	min-height: 180px !important;
 }
 .categoria-looping ul {
 	list-style: none;
@@ -1054,4 +1055,13 @@ div.wpcf7-validation-errors {
 }
 .col-md-12.categoria-looping {
     margin-top: 30px;
+}
+.form-box.orcamento{
+margin-top: 0;
+margin-bottom: 0;
+}
+
+ .form-box.contato {
+margin-top: 0;
+
 }

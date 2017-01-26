@@ -24,13 +24,13 @@
               <?php the_post_thumbnail('full',array('class'=> 'img-responsive')); ?>
             </div>
             <div class="col-md-6 texto-boxes">
-            <div class="row btn-mais-menos internas">
+<!--             <div class="row btn-mais-menos internas">
               <ul class="">
                 <li class="menos"  id="menos"><img src="<?php bloginfo('template_url'); ?>/images/Amenos.gif" alt=""></li>
                 <li class="normal" id="normal"><img src="<?php bloginfo('template_url'); ?>/images/Apadrao.gif" alt=""></li>
                 <li class="mais" id="mais"><img src="<?php bloginfo('template_url'); ?>/images/Amais.gif" alt=""></li>
               </ul>
-            </div> 
+            </div>  -->
             <div class="content">
               <?php the_content(); ?>
             </div>           
@@ -48,24 +48,25 @@
            <h1><span class="text-light">NOSSOS</span> <span class="text-bold">DIFERENCIAIS</span></h1>
          </div>
          <div class="container">
-           <?php $query = new WP_Query( 'post_type=diferenciais&order=ASC&showposts=-1' ); ?>
+           <?php $query = new WP_Query( 'post_type=diferenciais&order=ASC&showposts=-1&order=date' ); ?>
            <?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
 
             <div class="col-md-3 col-sm-6 col-sm-offset-0 col-md-offset-0 col-xs-8 col-xs-offset-2">
-
+              <a href="<?php the_permalink(); ?> ">
               <div class="col-md-12 lado-foto-2 dif-fotos text-center">
                 <div class="bg-hover"></div>
                 <div class="block-opacity-info">
-                  <p><?php echo excerpt('20'); ?></p>
+                  <p><?php the_field('diferenciais_descricao'); ?></p>
                 </div>
                 <p><?php the_post_thumbnail(); ?></p>  
                 
               </div>
+              </a>
               <div class="col-md-12 diferenciais-area-text text-center">
                 <span><?php the_title(); ?></span>
                 <div class="col-md-12 text-center parag">
-                  <?php the_content() ?>
+                  <p><?php echo excerpt('15'); ?></p>
                 </div>                     
               </div> 
               

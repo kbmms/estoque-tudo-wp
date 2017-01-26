@@ -19,7 +19,7 @@
 
       <div class="container-fluid">
        <div class="container">
-         <div class="form-box col-md-10 col-md-offset-1">
+         <div class="form-box orcamento col-md-10 col-md-offset-1">
           
         
           <?php echo do_shortcode('[contact-form-7 id="292" title="Formulário Orçamento"]'); ?>

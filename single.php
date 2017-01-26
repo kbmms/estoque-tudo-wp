@@ -19,14 +19,14 @@
  
 
     <div class="col-md-8">
-    <div class="row btn-mais-menos">
+<!--     <div class="row btn-mais-menos">
       <ul class="">
         <li class="menos"  id="menos"><img src="<?php bloginfo('template_url'); ?>/images/Amenos.gif" alt=""></li>
         <li class="normal" id="normal"><img src="<?php bloginfo('template_url'); ?>/images/Apadrao.gif" alt=""></li>
         <li class="mais" id="mais"><img src="<?php bloginfo('template_url'); ?>/images/Amais.gif" alt=""></li>
       </ul>
     </div>
-
+ -->
     <?php if( is_single( array( 'seguranca', 'rapidez', 'preco-justo', 'localizacao' ) ) ){ ?>
         <div class="col-md-12 foto-blog hidden">
           <?php the_post_thumbnail('full', array('class' => 'img-responsive')) ?>
@@ -39,8 +39,12 @@
 
         <div class="single col-md-12 content">
          <?php $date_new = get_the_time("F Y"); ?>
-         <p>Publicado em: <strong><?php echo $date_new; ?></strong></p> 
-         <p>Categoria: <strong><?php echo '<span>'. get_the_category( $id )[0]->name .'</span>'; ?></strong> </p>
+         <p>Publicado em: <strong> <?php the_time('j \d\e F \d\e Y') ?></strong></p> 
+         <?php if( is_single( array( 'seguranca', 'rapidez', 'preco-justo', 'localizacao' ) ) ){ ?>
+         <p></p>
+         <?php } else { ?>
+          <p>Categoria: <strong><?php echo '<span>'. get_the_category( $id )[0]->name .'</span>'; ?></strong> </p>
+           <?php  } ?>
          <h1><?php the_title() ?></h1> 
          <br>
          <?php the_content() ?>
@@ -62,7 +66,7 @@
       <div class="col-md-12 lado-foto-2 dif-fotos text-center">
         <div class="bg-hover"></div>
         <div class="block-opacity-info">
-         <p><?php echo excerpt('20'); ?></p>
+         <p><?php the_field('diferenciais_descricao') ?></p>
        </div>
 
 
